@@ -1,0 +1,35 @@
+const Android = require('android.app.*');
+const View = require('android.view.View');
+const FrameLayout = require('android.widget.FrameLayout');
+const LayoutParams = require('android.widget.FrameLayout.LayoutParams');
+const ViewGroupLayoutParams = require('android.view.ViewGroup.LayoutParams');
+
+const Activity = require('android.app.Activity');
+const Context = require('android.content.Context');
+const activity = new Activity(Ti.Android.currentActivity);
+const view = new View(activity);
+
+const main = new FrameLayout(activity);
+main.setLayoutParams(new LayoutParams(ViewGroupLayoutParams.MATCH_PARENT, ViewGroupLayoutParams.MATCH_PARENT));
+
+$.index.add(main);
+
+const fragmentManager = activity.getFragmentManager();
+const fragmentTransaction = fragmentManager.beginTransaction();
+const ItemOne = require('fragments/itemOne');
+const fragment = new ItemOne();
+const context = activity.getApplicationContext();
+const LayoutInflater = require('android.view.LayoutInflater');
+const inflater = LayoutInflater.from(context);
+
+//$.index.add(inflater.inflate(Titanium.App.Android.R.layout.fragment_layout)
+Ti.API.info(Titanium.App.Android.R.layout.fragment_layout);
+try {
+  inflater.inflate(Titanium.App.Android.R.layout.activity_main, main);
+	//fragmentTransaction.add(Titanium.App.Android.R.id.frame_layout, fragment);
+	//fragmentTransaction.commit();
+} catch (e) {
+  Ti.API.error(e.message);
+}
+
+$.index.open();

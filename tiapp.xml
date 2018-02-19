@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><ti:app xmlns:ti="http://ti.appcelerator.org">
+	<id>es.jormagar.bottomNavigation</id>
+	<name>BottomNavigation</name>
+	<version>1.0.0</version>
+	<publisher>Jorge Macías García</publisher>
+	<url>http://</url>
+	<description/>
+	<copyright>(C) 2018</copyright>
+	<icon>appicon.png</icon>
+	<fullscreen>false</fullscreen>
+	<navbar-hidden>false</navbar-hidden>
+	<analytics>false</analytics>
+	<guid>f1dc66ea-4c3a-4a10-bbaa-42558a22ca2e</guid>
+	<property name="ti.ui.defaultunit" type="string">dp</property>
+	<property name="run-on-main-thread" type="bool">true</property>
+	<android xmlns:android="http://schemas.android.com/apk/res/android">
+	</android>
+	<modules>
+		<module>hyperloop</module>
+	</modules>
+	<deployment-targets>
+		<target device="android">true</target>
+	</deployment-targets>
+	<sdk-version>7.0.2.GA</sdk-version>
+<plugins><plugin version="1.0">ti.alloy</plugin>
+</plugins>
+</ti:app>
