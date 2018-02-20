@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000">
+    android:background="@color/white">
 
     <RelativeLayout
         android:id="@+id/relative_layout"
@@ -22,9 +22,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="#ff5252"
-        app:itemIconTint="@color/nav_item_state_list"
-        app:itemTextColor="@color/nav_item_state_list"
+        android:background="@color/colorPrimary"
+        app:itemIconTint="@color/bottom_nav_states"
+        app:itemTextColor="@color/bottom_nav_states"
         app:menu="@menu/navigation_items"
-        android:theme="@style/Theme.AppCompat"/>
+        android:theme="@style/Theme.AppCompat" />
 </RelativeLayout>
