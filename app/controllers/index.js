@@ -4,13 +4,8 @@ const Activity = require('android.app.Activity'),
 const FrameLayout = require('android.widget.FrameLayout');
 const frameLayout = FrameLayout.cast($.bottomNavContainer.findViewById(Titanium.App.Android.R.id.frame_layout));
 const BottomNavigationView = require('android.support.design.widget.BottomNavigationView');
-//const navigation = BottomNavigationView.cast($.bottomNavContainer.findViewById(Titanium.App.Android.R.id.navigation));
+const navigation = BottomNavigationView.cast($.bottomNavContainer.findViewById(Titanium.App.Android.R.id.navigation));
 const R = require('android.R');
-const navigation = BottomNavigationView.cast($.bottomNavContainer.findViewById(resIDFromString('navigation', 'id')));
-
-function resIDFromString(variableName, resourceName) {
-  return activity.getResources().getIdentifier(variableName, resourceName, activity.getPackageName());
-}
 
 for (var i in BottomNavigationView) {
   Ti.API.info(i);
