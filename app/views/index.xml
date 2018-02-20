@@ -1,5 +1,5 @@
 <Alloy>
 	<Window class="container">
-		<BottomNavigation id="bottomNav" module="ui/BottomNavigation" layout="activity_main" />
+		<BottomNavigation id="bottomNavContainer" module="ui/BottomNavigation" layout="activity_main" />
 	</Window>
 </Alloy>
