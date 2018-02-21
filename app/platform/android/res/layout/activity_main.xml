@@ -3,9 +3,12 @@
   xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:app="http://schemas.android.com/apk/res-auto"
   xmlns:tools="http://schemas.android.com/tools"
-  android:theme="@style/Theme.AppCompat.Light">
+  android:theme="@style/Theme.AppCompat">
 
-  <FrameLayout android:id="@+id/frame_layout" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+  <FrameLayout
+    android:id="@+id/frame_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"/>
 
   <android.support.design.widget.BottomNavigationView
     android:id="@+id/navigation"
@@ -16,7 +19,6 @@
     app:itemIconTint="@color/bottom_nav_states"
     app:itemTextColor="@color/bottom_nav_states"
     app:menu="@menu/navigation_items"
-    android:layout_gravity="bottom"
-    android:theme="@style/Theme.AppCompat.Light"/>
+    android:layout_gravity="bottom"/>
 
 </android.support.design.widget.CoordinatorLayout>
