@@ -1,16 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<!-- Definimos paleta de colores -->
-	<color name="primary_dark">#37525e</color>
-	<color name="primary">#476471</color>
-	<color name="primary_light">#c8d1d4</color>
-	<color name="white">#FFFFFF</color>
-	<color name="white_dark">#DFDFDF</color>
-	<color name="gray">#7A7A7A</color>
-	<color name="gray_dark">#3C3C3C</color>
-	<color name="gray_light">#BBBBBB</color>
-	<color name="black">#000000</color>
-
 	<!-- Definimos custom ActionBar -->
 	<style name="Custom.ActionBar" parent="@style/Widget.AppCompat.ActionBar.Solid">
 		<item name="elevation">0dp</item>
