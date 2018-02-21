@@ -16,6 +16,7 @@
     app:itemIconTint="@color/bottom_nav_states"
     app:itemTextColor="@color/bottom_nav_states"
     app:menu="@menu/navigation_items"
-    android:layout_gravity="bottom"/>
+    android:layout_gravity="bottom"
+    android:theme="@style/Theme.AppCompat.Light"/>
 
 </android.support.design.widget.CoordinatorLayout>
