@@ -1,10 +1,13 @@
 const Activity = require('android.app.Activity'),
   activity = new Activity(Ti.Android.currentActivity);
 
-const FrameLayout = require('android.widget.FrameLayout');
-const frameLayout = FrameLayout.cast($.bottomNavContainer.findViewById(Titanium.App.Android.R.id.frame_layout));
+//const FrameLayout = require('android.widget.FrameLayout');
+//const frameLayout = FrameLayout.cast($.bottomNavContainer.findViewById(Titanium.App.Android.R.id.frame_layout));
 const BottomNavigationView = require('android.support.design.widget.BottomNavigationView');
-const navigation = BottomNavigationView.cast($.bottomNavContainer.findViewById(Titanium.App.Android.R.id.navigation));
+const TextView = require('android.widget.TextView');
+
+let textView;
+let navigation;
 
 //Trying to fix first selection updating menu manually with updateMenuView method
 /*
@@ -48,41 +51,39 @@ for (let i = 0; i < menuView.getChildCount(); i++) {
   item.setChecked(item.getItemData().isChecked());
 }*/
 
-navigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener({
-  onNavigationItemSelected: function (item) {
-    let message = 'Selected: ';
-    let selected = item.getItemId();
 
-    item.setChecked(true);
 
-    switch (selected) {
-      case Titanium.App.Android.R.id.action_item1:
-        message += 'Item 1';
-        break;
-      case Titanium.App.Android.R.id.action_item2:
-        message += 'Item 2';
-        break;
-      case Titanium.App.Android.R.id.action_item3:
-        message += 'Item 3';
-        break;
+
+$.index.activity.onCreate = function () {
+  Ti.API.info('onCreate');
+
+  message = TextView.cast($.bottomNavContainer.findViewById(Titanium.App.Android.R.id.message));
+  navigation = BottomNavigationView.cast($.bottomNavContainer.findViewById(Titanium.App.Android.R.id.navigation));
+
+  navigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener({
+    onNavigationItemSelected: function (item) {
+      Ti.API.info('on Navigation Item Selected');
+      //item.setChecked(true);
+
+      try {
+        switch (item.getItemId()) {
+          case Titanium.App.Android.R.id.navigation_home:
+            message.setText('Home');
+            return true;
+          case Titanium.App.Android.R.id.navigation_dashboard:
+            message.setText('Dashboard');
+            return true;
+          case Titanium.App.Android.R.id.navigation_notifications:
+            message.setText('Notifications');
+            return true;
+        }
+      } catch (e) {
+        Ti.API.info(e.message);
+      }
+
+      return false;
     }
-
-    $.msg.setText(message);
-
-    return false;
-  }
-}));
-
-$.msg = Ti.UI.createLabel({
-  left: 16,
-  right: 16,
-  color: 'black',
-  font: {
-    fontSize: 24
-  },
-  text: 'I am a label added to the FrameLayout programmatically'
-});
-
-frameLayout.addView($.msg);
+  }));
+};
 
 $.index.open();

@@ -1,17 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <!-- Definimos paleta de colores -->
-  <color name="colorPrimary">#3F51B5</color>
-  <color name="colorPrimaryDark">#303F9F</color>
-  <color name="colorAccent">#FF4081</color>
-  <color name="primary_dark">@color/colorPrimaryDark</color>
-  <color name="primary">@color/colorPrimary</color>
-  <color name="primary_light">#c5cbe9</color>
-  <color name="white">#FFFFFF</color>
-  <color name="white_dark">#DFDFDF</color>
-  <color name="white_trans">#99FFFFFF</color>
-  <color name="gray">#7A7A7A</color>
-  <color name="gray_dark">#3C3C3C</color>
-  <color name="gray_light">#BBBBBB</color>
-  <color name="black">#000000</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
 </resources>
